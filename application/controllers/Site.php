@@ -40,9 +40,11 @@ public function __construct()
 
 	public function index()
 	{
-		$data['page_description']='Home';
+		//$data['page_description']='Home';
 	/*	$data['contact_setup']=$this->contact_setup_model->get_contact();*/
-		$this->display('home',$data);
+	//	$this->display('home',$data);
+		$this->load->view('home');
+
 	}
 
 	public function contact(){
