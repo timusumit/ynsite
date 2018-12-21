@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tribhuwan University Centre For International Relation</title>
-	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="<?php echo base_url('site_assets/');?>css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?php echo base_url('site_assets/');?>css/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed|Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/bootstrap.min.css" />
+
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/owl.theme.default.css" />
+
+	<!-- Magnific Popup -->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/magnific-popup.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="<?php echo base_url('site_assets/'); ?>css/style.css" />
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="<?php echo base_url('site_assets/'); ?>https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="<?php echo base_url('site_assets/'); ?>https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-<body>
-	<header>
-		<div class="container">
-		<div class="col-lg-8 header_brand_wrap">
-			<div class="row">
-			<div class="col-2 logo_wrap">
-				<a href="<?php echo base_url(); ?>"><img class="img-fluid" src="<?php echo base_url('site_assets/');?>images/logo.png" title="Tribhuwan University" alt="TULOGO"></a>
-			</div>
-			<div class="col logo_text_wrap">
-				<h4>Tribhuwan University</h4>
-				<h4>Centre for internation relation</h4>
-			</div>
-		</div>
-	</div>
-	</header>

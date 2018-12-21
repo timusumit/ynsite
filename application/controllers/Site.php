@@ -43,7 +43,10 @@ public function __construct()
 		//$data['page_description']='Home';
 	/*	$data['contact_setup']=$this->contact_setup_model->get_contact();*/
 	//	$this->display('home',$data);
+		$this->load->view('site_templates/header');
+		$this->load->view('site_templates/navigation');
 		$this->load->view('home');
+		$this->load->view('site_templates/footer');
 
 	}
 
@@ -67,7 +70,6 @@ public function __construct()
 	public function page()
 
 	{
-		$data['create_page']=$this->create_page_model->get_page_content();
-		$this->display('site/page',$data);
+		$this->load->view('site/page');
 	}
 }
