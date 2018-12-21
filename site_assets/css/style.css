@@ -942,7 +942,7 @@ header {
 .pricing .duration {
     display: block;
     font-size: 14px;
-    text-transform: uppercase;
+   /* text-transform: uppercase;*/
     color: #10161A;
     -webkit-transition: 0.2s color;
     transition: 0.2s color;

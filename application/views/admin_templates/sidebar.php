@@ -30,12 +30,12 @@ $classvalue=$this->uri->segment(2);
           </li>
 
 
-        <!--   <li class="nav-item  <?php if ($classvalue=='appointments') echo "active" ?>  ">
+           <li class="nav-item  <?php if ($classvalue=='appointments') echo "active" ?>  ">
             <a class="nav-link" href="<?php echo base_url('admin/appointments') ?>">
               <i class="material-icons">person</i>
               <p>Appointments</p>
             </a>
-          </li> -->
+          </li> 
        
        
           <li class="nav-item   <?php if ($classvalue=='create_post') echo "active" ?>  ">

@@ -6,8 +6,8 @@
                 	<div class="col-lg-12">
                 	<div class="card">
                     <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Gallery Setup</h4>
-                  <p class="card-category">The Gallery Setup is done here.</p>
+                  <h4 class="card-title ">Portfolio Setup</h4>
+                  <p class="card-category">The Portfolio Setup is done here.</p>
                 </div>
                 		<div class="card-body">
                       <div class="col-lg-12 text-right"><a href="#" data-target="#addModal" data-toggle="modal" class="btn btn-success">ADD</a></div>
@@ -38,7 +38,7 @@
    <?php echo form_open_multipart('admin/gallery_setup/do_upload'); ?> 
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add gallery</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Portfolio</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -53,16 +53,22 @@
 		</div>
 			<div class="input-group mb-3">
   			<div class="input-group-prepend">
-    			<span class="input-group-text">Gallery Title</span>
+    			<span class="input-group-text">Portfolio Title</span>
   			</div>
   			<input  class="form-control" name="gallery_title" id="gallery_title" >
 		</div>
 		<div class="input-group mb-3">
   			<div class="input-group-prepend">
-    			<span class="input-group-text">Gallery Subtitle</span>
+    			<span class="input-group-text">Portfolio Category</span>
   			</div>
   			<input  class="form-control" name="gallery_subtitle" id="gallery_subtitle" required="" >
 		</div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Portfolio Link</span>
+        </div>
+        <input  class="form-control" name="gallery_link" id="gallery_link" required="" >
+    </div>
        </div>
       </div>
       <div class="modal-footer">

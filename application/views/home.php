@@ -430,7 +430,7 @@
 						<div class="price-head">
 							<span class="price-title">Basic plan</span>
 							<div class="price">
-								<h3>$9<span class="duration">/ month</span></h3>
+								<h3>$9<span class="duration">Rs/-* Only</span></h3>
 							</div>
 						</div>
 						<ul class="price-content">
@@ -457,7 +457,7 @@
 						<div class="price-head">
 							<span class="price-title">Silver plan</span>
 							<div class="price">
-								<h3>$19<span class="duration">/ month</span></h3>
+								<h3>$19<span class="duration">Rs/-* Only</span></h3>
 							</div>
 						</div>
 						<ul class="price-content">
@@ -484,7 +484,7 @@
 						<div class="price-head">
 							<span class="price-title">Gold plan</span>
 							<div class="price">
-								<h3>$39<span class="duration">/ month</span></h3>
+								<h3>$39<span class="duration">Rs/-* Only</span></h3>
 							</div>
 						</div>
 						<ul class="price-content">
