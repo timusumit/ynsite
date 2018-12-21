@@ -743,6 +743,7 @@
 				<!-- Section-header -->
 				<div class="section-header text-center">
 					<h2 class="title">Get in touch</h2>
+					<p class="text-success text-bold"><?php echo	$this->session->flashdata('success_contact'); ?></p>
 				</div>
 				<!-- /Section-header -->
 
@@ -778,12 +779,12 @@
 
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
-						<input type="text" class="input" placeholder="Name">
-						<input type="email" class="input" placeholder="Email">
-						<input type="text" class="input" placeholder="Subject">
-						<textarea class="input" placeholder="Message"></textarea>
-						<button class="main-btn">Send message</button>
+					<form class="contact-form" action="<?php echo base_url('site/add_inquiry') ?>" method="post">
+						<input type="text" class="input" placeholder="name" name="name">
+						<input type="email" class="input" placeholder="email" name="email">
+						<input type="text" class="input" placeholder="subject" name="subject">
+						<textarea class="input" placeholder="message" name="message"></textarea>
+						<button class="main-btn" type="submit">Send message</button>
 					</form>
 				</div>
 				<!-- /contact form -->

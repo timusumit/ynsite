@@ -17,6 +17,7 @@ public function __construct()
         $this->load->model('slider_setup_model');
          $this->load->model('gallery_setup_model');
         $this->load->model('create_post_model');
+        $this->load->model('social_setup_model');
         $this->load->helper('text');
     }
 
@@ -31,6 +32,7 @@ public function __construct()
 	 	$data['get_news']=$this->create_post_model->get_news();
 	 	$data['get_news_list']=$this->create_post_model->get_news_list();
 	 	$data['get_events_list']=$this->create_post_model->get_events_list();
+	 	$data['social_setup']=$this->social_setup_model->get_social();
 		$this->load->view('site_templates/header.php');
 		$this->load->view('site_templates/navigation.php',$data);
 		$this->load->view($view,$data);
@@ -41,12 +43,12 @@ public function __construct()
 	public function index()
 	{
 		//$data['page_description']='Home';
-	/*	$data['contact_setup']=$this->contact_setup_model->get_contact();*/
-	//	$this->display('home',$data);
-		$this->load->view('site_templates/header');
+		$data['contact_setup']=$this->contact_setup_model->get_contact();
+		$this->display('home',$data);
+		/*$this->load->view('site_templates/header');
 		$this->load->view('site_templates/navigation');
 		$this->load->view('home');
-		$this->load->view('site_templates/footer');
+		$this->load->view('site_templates/footer');*/
 
 	}
 
@@ -64,7 +66,7 @@ public function __construct()
 	public function add_inquiry(){
     $this->inquiry_model->set_inquiry();
    	$this->session->set_flashdata('success_contact', 'Message Send Successfully.');
-    redirect('site/contact');
+    redirect('site/#contact');
 
 	}
 	public function page()
