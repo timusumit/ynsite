@@ -11,8 +11,8 @@
 							<h1 class="white-text">We Are Creative Agency</h1>
 							<p class="white-text">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
 							</p>
-							<button class="white-btn">Get Started!</button>
-							<button class="main-btn">Learn more</button>
+							<a href="#pricing" class="white-btn">Get Started!</a>
+							<a href="#service" class="main-btn">Learn more</a>
 						</div>
 					</div>
 					<!-- /home content -->
@@ -196,7 +196,7 @@
 	</div>
 	<!-- /Portfolio -->
 
-	<!-- Service -->
+	
 	<div id="service" class="section md-padding">
 
 		<!-- Container -->
@@ -207,21 +207,30 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">What we offer</h2>
+					<h2 class="title">Our Services</h2>
 				</div>
 				<!-- /Section header -->
-
-				<!-- service -->
+				<?php foreach ($services_setup as $key=>$data): ?>
 				<div class="col-md-4 col-sm-6">
+					<div class="service">
+						<i class="fa fa-diamond"></i>
+						<h3><?php echo $data['service_title'] ?></h3>
+						<p><?php echo $data['service_content'] ?></p>
+					</div>
+				</div>
+			<?php endforeach; ?>
+
+
+				<!-- <div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-diamond"></i>
 						<h3>App Development</h3>
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
 				</div>
-				<!-- /service -->
+				
 
-				<!-- service -->
+				
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-rocket"></i>
@@ -229,9 +238,9 @@
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
 				</div>
-				<!-- /service -->
+				
 
-				<!-- service -->
+				
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-cogs"></i>
@@ -239,9 +248,9 @@
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
 				</div>
-				<!-- /service -->
+				
 
-				<!-- service -->
+				
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-diamond"></i>
@@ -249,9 +258,9 @@
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
 				</div>
-				<!-- /service -->
+				
 
-				<!-- service -->
+				
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-pencil"></i>
@@ -259,17 +268,17 @@
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
 				</div>
-				<!-- /service -->
+				
 
-				<!-- service -->
+				
 				<div class="col-md-4 col-sm-6">
 					<div class="service">
 						<i class="fa fa-flask"></i>
 						<h3>Brand Design</h3>
 						<p>Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.</p>
 					</div>
-				</div>
-				<!-- /service -->
+				</div> -->
+				
 
 			</div>
 			<!-- /Row -->
@@ -278,7 +287,7 @@
 		<!-- /Container -->
 
 	</div>
-	<!-- /Service -->
+	
 
 
 	<!-- Why Choose Us -->
@@ -560,22 +569,22 @@
 	</div>
 	<!-- /Testimonial -->
 
-	<!-- Team -->
-	<div id="team" class="section md-padding">
+	
+	<!-- <div id="team" class="section md-padding">
 
-		<!-- Container -->
+		
 		<div class="container">
 
-			<!-- Row -->
+			
 			<div class="row">
 
-				<!-- Section header -->
+				
 				<div class="section-header text-center">
 					<h2 class="title">Our Team</h2>
 				</div>
-				<!-- /Section header -->
+				
 
-				<!-- team -->
+				
 				<div class="col-sm-4">
 					<div class="team">
 						<div class="team-img">
@@ -594,9 +603,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- /team -->
+				
 
-				<!-- team -->
+				
 				<div class="col-sm-4">
 					<div class="team">
 						<div class="team-img">
@@ -615,9 +624,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- /team -->
+				
 
-				<!-- team -->
+				
 				<div class="col-sm-4">
 					<div class="team">
 						<div class="team-img">
@@ -636,16 +645,16 @@
 						</div>
 					</div>
 				</div>
-				<!-- /team -->
+				
 
 			</div>
-			<!-- /Row -->
+			
 
 		</div>
-		<!-- /Container -->
+		
 
-	</div>
-	<!-- /Team -->
+	</div> -->
+	
 
 	<!-- Blog -->
 	<div id="blog" class="section md-padding bg-grey">
@@ -746,13 +755,13 @@
 					<p class="text-success text-bold"><?php echo	$this->session->flashdata('success_contact'); ?></p>
 				</div>
 				<!-- /Section-header -->
-
+<?php foreach($contact_setup as $key=>$data): ?>
 				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
 						<i class="fa fa-phone"></i>
 						<h3>Phone</h3>
-						<p>512-421-3940</p>
+						<p><?php echo $data['phone'] ?></p>
 					</div>
 				</div>
 				<!-- /contact -->
@@ -762,7 +771,7 @@
 					<div class="contact">
 						<i class="fa fa-envelope"></i>
 						<h3>Email</h3>
-						<p>email@support.com</p>
+						<p><?php echo $data['email'] ?></p>
 					</div>
 				</div>
 				<!-- /contact -->
@@ -772,11 +781,11 @@
 					<div class="contact">
 						<i class="fa fa-map-marker"></i>
 						<h3>Address</h3>
-						<p>1739 Bubby Drive</p>
+						<p><?php echo $data['address'] ?></p>
 					</div>
 				</div>
 				<!-- /contact -->
-
+<?php endforeach; ?>
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
 					<form class="contact-form" action="<?php echo base_url('site/add_inquiry') ?>" method="post">

@@ -18,6 +18,7 @@ public function __construct()
          $this->load->model('gallery_setup_model');
         $this->load->model('create_post_model');
         $this->load->model('social_setup_model');
+        $this->load->model('services_setup_model');
         $this->load->helper('text');
     }
 
@@ -33,6 +34,7 @@ public function __construct()
 	 	$data['get_news_list']=$this->create_post_model->get_news_list();
 	 	$data['get_events_list']=$this->create_post_model->get_events_list();
 	 	$data['social_setup']=$this->social_setup_model->get_social();
+	 	$data['services_setup']=$this->services_setup_model->get_services();
 		$this->load->view('site_templates/header.php');
 		$this->load->view('site_templates/navigation.php',$data);
 		$this->load->view($view,$data);

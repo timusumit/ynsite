@@ -16,7 +16,7 @@
         <div class="navbar-header">
           <!-- Logo -->
           <div class="navbar-brand">
-            <a href="<?php echo base_url('site_assets/'); ?>index.html">
+            <a href="<?php echo base_url(); ?>">
               <img class="logo" src="<?php echo base_url('site_assets/'); ?>img/logo.png" alt="logo">
               <img class="logo-alt" src="<?php echo base_url('site_assets/'); ?>img/logo-alt.png" alt="logo">
             </a>
