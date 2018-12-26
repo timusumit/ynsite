@@ -6,7 +6,7 @@
                 	<div class="col-lg-12">
                 	<div class="card">
                     <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Create page</h4>
+                  <h4 class="card-title ">Create package</h4>
                   <p class="card-category">Add/Edit/Delete Inner Page!</p>
                 </div>
                 		<div class="card-body">
@@ -46,7 +46,7 @@
    <?php echo form_open_multipart('admin/create_page/do_upload'); ?> 
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Create page</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Create Package</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -55,7 +55,7 @@
        <div class="col-lg-12">
        	<div class="input-group mb-3">
   			<div class="input-group-prepend">
-    			<span class="input-group-text">Page Title</span>
+    			<span class="input-group-text">Package Name</span>
   			</div>
   			<input type="text"  class="form-control" name="page_title" id="page_title" >
 		</div>
