@@ -409,7 +409,7 @@
 	</div>
 	<!-- /Numbers -->
 
-	<!-- Pricing -->
+	
 	<div id="pricing" class="section md-padding">
 
 		<!-- Container -->
@@ -424,7 +424,101 @@
 				</div>
 				<!-- /Section header -->
 
-				<!-- pricing -->
+			<?php foreach ($package_setup as $key=>$data):  ?>
+
+				<div class="col-sm-4">
+					<div class="pricing">
+						<div class="price-head">
+							<span class="price-title"><?php echo $data['package_name'] ?></span>
+							<div class="price">
+								<h3><?php echo $data['main_price'] ?><span class="duration">Rs/-* Only</span></h3>
+							</div>
+						</div>
+						<ul class="price-content">
+							<li>
+								<p><?php echo $data['disk_space'] ?> Disk Space</p>
+							</li>
+							<li>
+								<p><?php echo $data['bandwidth'] ?> Montly Bandwidth</p>
+							</li>
+							<li>
+								<p><?php echo $data['extra_feature'] ?></p>
+							</li>
+							<li>
+								<p>Renew at Rs.&nbsp;<?php echo $data['renew_price'] ?>&nbsp; Only</p>
+							</li>
+
+						</ul>
+						<div class="price-btn">
+							<a data-toggle="modal" data-target="#booking" data-package_id="<?php echo $data['package_id'] ?>" data-package_name="<?php echo $data['package_name'] ?>" href="<?php echo base_url('site/book_package/'.$data['package_id']) ?>" class="outline-btn add_cart">Book now</a>
+						</div>
+					</div>
+				</div>
+			<?php endforeach; ?>
+
+
+<script type="text/javascript">
+   $(function(){
+        $(document).on("click", ".add_cart", function () {
+            var package_id = $(this).data('package_id');
+          //  alert(package_id);
+          // var main_price= $(this).data('main_price');
+            var package_name= $(this).data('package_name');
+         //   alert(package_name);
+         /*   var disk_space=$(this).data('disk_space'); 
+            var bandwidth= $(this).data('bandwidth');
+            var extra_feature=$(this).data('extra_feature'); 
+            var renew_price= $(this).data('renew_price');*/
+            //$(".modal-header .modal-title ").val(package_name);   
+           /* $(".modal-body .input-group #main_price").val(main_price);
+            $(".modal-body .input-group #disk_space").val(disk_space); 
+            $(".modal-body .input-group #bandwidth").val(bandwidth);   
+            $(".modal-body .input-group #extra_feature").val(extra_feature);
+            $(".modal-body .input-group #renew_price").val(renew_price);    */  
+
+            $("#booking form").attr('action','book_package/add/'+package_id);            
+            $('#booking').modal('show');            
+        });
+});
+</script>
+
+
+<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirm Booking</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+      <div class="modal-body">
+     	
+     		<div class="row">
+     			<div class="col-lg-6">
+     				<label>Name:</label>
+     			</div>
+     			<div class="col-lg-6">
+     				<input type="text" name="name" >
+
+     			</div>
+     		</div>
+     	
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-success">Confirm</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- 
+
 				<div class="col-sm-4">
 					<div class="pricing">
 						<div class="price-head">
@@ -449,9 +543,11 @@
 						</div>
 					</div>
 				</div>
-				<!-- /pricing -->
 
-				<!-- pricing -->
+
+				
+
+				
 				<div class="col-sm-4">
 					<div class="pricing">
 						<div class="price-head">
@@ -476,9 +572,9 @@
 						</div>
 					</div>
 				</div>
-				<!-- /pricing -->
+				
 
-				<!-- pricing -->
+				
 				<div class="col-sm-4">
 					<div class="pricing">
 						<div class="price-head">
@@ -502,8 +598,8 @@
 							<button class="outline-btn">Purchase now</button>
 						</div>
 					</div>
-				</div>
-				<!-- /pricing -->
+				</div> -->
+				
 
 			</div>
 			<!-- Row -->
@@ -512,7 +608,7 @@
 		<!-- /Container -->
 
 	</div>
-	<!-- /Pricing -->
+	
 
 
 	<!-- Testimonial -->

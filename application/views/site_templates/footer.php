@@ -59,7 +59,7 @@
 	<!-- /Preloader -->
 
 	<!-- jQuery Plugins -->
-	<script type="text/javascript" src="<?php echo base_url('site_assets/'); ?>js/jquery.min.js"></script>
+	
 	<script type="text/javascript" src="<?php echo base_url('site_assets/'); ?>js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url('site_assets/'); ?>js/owl.carousel.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url('site_assets/'); ?>js/jquery.magnific-popup.js"></script>

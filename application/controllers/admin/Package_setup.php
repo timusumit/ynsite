@@ -33,5 +33,17 @@ public function add(){
 
 }
 
+public function edit(){
+	$package_id=$this->uri->segment(4);
+	$this->package_setup_model->edit_package($package_id);
+	redirect('admin/package_setup');
+}
+
+public function delete(){
+	$package_id=$this->uri->segment(4);
+	$this->package_setup_model->delete_package($package_id);
+	redirect('admin/package_setup');
+}
+
 /* write above here */
 }
