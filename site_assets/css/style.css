@@ -1751,3 +1751,9 @@ header {
             transform:scale(0);
   }
 }
+
+
+.booking_form input{
+    margin:10px 0;
+}
+

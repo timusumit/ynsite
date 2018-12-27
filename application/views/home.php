@@ -494,21 +494,33 @@
       </div>
       <form>
       <div class="modal-body">
-     	
-     		<div class="row">
-     			<div class="col-lg-6">
-     				<label>Name:</label>
-     			</div>
-     			<div class="col-lg-6">
-     				<input type="text" name="name" >
+     	<div class="row">
+     		<div class="col-lg-12 booking_form">
+     			
+     				<!-- <span class="input-group-addon text-left" style="min-width: 185px;">Name:</span> -->
+     				<input class="form-control" type="text" name="name" required="" placeholder="Name">
+     			
+     			
+     				<!-- <span class="input-group-addon text-left" style="min-width: 185px;">Email:</span> -->
+     				<input class="form-control" type="email" name="email" placeholder="Email" >
+     			
+     			
+     				<!-- <span class="input-group-addon text-left" style="min-width: 185px;">Phone:</span> -->
+     				<input class="form-control" type="text" name="phone" required="" placeholder="Phone">
+     			
+     			
+     				<!-- <span class="input-group-addon text-left" style="min-width: 185px;">Requirements(optional):</span> -->
+     				<textarea class="input"  name="requirements" placeholder="Requirements (Optional)"></textarea>
+     			
 
-     			</div>
+     		
      		</div>
+     	</div>
      	
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-success">Confirm</button>
+      
+        <button type="submit" class="outline-btn ">Confirm</button>
       </div>
       </form>
     </div>
