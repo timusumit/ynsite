@@ -291,15 +291,15 @@
 
 
 	<!-- Why Choose Us -->
-	<div id="features" class="section md-padding bg-grey">
+	<!-- <div id="features" class="section md-padding bg-grey">
 
-		<!-- Container -->
+		
 		<div class="container">
 
-			<!-- Row -->
+			
 			<div class="row">
 
-				<!-- why choose us content -->
+				
 				<div class="col-md-6">
 					<div class="section-header">
 						<h2 class="title">Why Choose Us</h2>
@@ -322,9 +322,7 @@
 						<p>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</p>
 					</div>
 				</div>
-				<!-- /why choose us content -->
-
-				<!-- About slider -->
+			
 				<div class="col-md-6">
 					<div id="about-slider" class="owl-carousel owl-theme">
 						<img class="img-responsive" src="<?php echo base_url('site_assets/'); ?>img/about1.jpg" alt="">
@@ -333,34 +331,30 @@
 						<img class="img-responsive" src="<?php echo base_url('site_assets/'); ?>img/about2.jpg" alt="">
 					</div>
 				</div>
-				<!-- /About slider -->
+				
 
 			</div>
-			<!-- /Row -->
+			
 
 		</div>
-		<!-- /Container -->
+		
 
-	</div>
+	</div> -->
 	<!-- /Why Choose Us -->
 
 
 	<!-- Numbers -->
-	<div id="numbers" class="section sm-padding">
+	<!-- <div id="numbers" class="section sm-padding">
 
-		<!-- Background Image -->
+		
 		<div class="bg-img" style="background-image: url('<?php echo base_url('site_assets/'); ?>/img/background2.jpg');">
 			<div class="overlay"></div>
 		</div>
-		<!-- /Background Image -->
-
-		<!-- Container -->
+		
 		<div class="container">
 
-			<!-- Row -->
 			<div class="row">
 
-				<!-- number -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="number">
 						<i class="fa fa-users"></i>
@@ -368,9 +362,7 @@
 						<span class="white-text">Happy clients</span>
 					</div>
 				</div>
-				<!-- /number -->
-
-				<!-- number -->
+				
 				<div class="col-sm-3 col-xs-6">
 					<div class="number">
 						<i class="fa fa-trophy"></i>
@@ -378,9 +370,7 @@
 						<span class="white-text">Awards won</span>
 					</div>
 				</div>
-				<!-- /number -->
-
-				<!-- number -->
+				
 				<div class="col-sm-3 col-xs-6">
 					<div class="number">
 						<i class="fa fa-coffee"></i>
@@ -388,9 +378,7 @@
 						<span class="white-text">Cups of Coffee</span>
 					</div>
 				</div>
-				<!-- /number -->
-
-				<!-- number -->
+				
 				<div class="col-sm-3 col-xs-6">
 					<div class="number">
 						<i class="fa fa-file"></i>
@@ -398,19 +386,19 @@
 						<span class="white-text">Projects completed</span>
 					</div>
 				</div>
-				<!-- /number -->
+				
 
 			</div>
-			<!-- /Row -->
+		
 
 		</div>
-		<!-- /Container -->
+		
 
-	</div>
+	</div> -->
 	<!-- /Numbers -->
 
 	
-	<div id="pricing" class="section md-padding">
+	<div id="pricing" class="section md-padding bg-grey">
 
 		<!-- Container -->
 		<div class="container">
@@ -450,7 +438,7 @@
 
 						</ul>
 						<div class="price-btn">
-							<a data-toggle="modal" data-target="#booking" data-package_id="<?php echo $data['package_id'] ?>" data-package_name="<?php echo $data['package_name'] ?>" href="<?php echo base_url('site/book_package/'.$data['package_id']) ?>" class="outline-btn add_cart">Book now</a>
+							<a data-toggle="modal" data-target="#booking" data-package_id="<?php echo $data['package_id'] ?>" data-package_name="<?php echo $data['package_name'] ?>" class="outline-btn add_cart">Book now</a>
 						</div>
 					</div>
 				</div>
@@ -476,7 +464,7 @@
             $(".modal-body .input-group #extra_feature").val(extra_feature);
             $(".modal-body .input-group #renew_price").val(renew_price);    */  
 
-            $("#booking form").attr('action','book_package/add/'+package_id);            
+            $("#booking form").attr('action','site/book_package/'+package_id);            
             $('#booking').modal('show');            
         });
 });
@@ -492,7 +480,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form>
+      <?php echo form_open(); ?>
       <div class="modal-body">
      	<div class="row">
      		<div class="col-lg-12 booking_form">
@@ -511,6 +499,8 @@
      			
      				<!-- <span class="input-group-addon text-left" style="min-width: 185px;">Requirements(optional):</span> -->
      				<textarea class="input"  name="requirements" placeholder="Requirements (Optional)"></textarea>
+
+     				<input type="text" style="display: none" name="date" value="<?php echo date('d/m/Y'); ?>">
      			
 
      		
@@ -522,7 +512,7 @@
       
         <button type="submit" class="outline-btn ">Confirm</button>
       </div>
-      </form>
+      <?php echo form_close(); ?>
     </div>
   </div>
 </div>

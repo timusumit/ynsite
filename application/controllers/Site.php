@@ -21,6 +21,7 @@ public function __construct()
         $this->load->model('services_setup_model');
         $this->load->helper('text');
         $this->load->model('package_setup_model');
+        $this->load->model('booking_model');
     }
 
 	
@@ -77,5 +78,11 @@ public function __construct()
 
 	{
 		$this->load->view('site/page');
+	}
+
+	public function book_package(){
+		$booking_id=$this->uri->segment(3);
+		$this->booking_model->add_booking($booking_id);
+		//redirect('site');
 	}
 }
