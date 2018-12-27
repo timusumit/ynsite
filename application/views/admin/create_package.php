@@ -43,7 +43,7 @@
 
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
-   <?php echo form_open_multipart('admin/create_page/do_upload'); ?> 
+   <?php echo form_open_multipart('admin/package_setup/add'); ?> 
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Create Package</h5>
@@ -57,26 +57,39 @@
   			<div class="input-group-prepend">
     			<span class="input-group-text">Package Name</span>
   			</div>
-  			<input type="text"  class="form-control" name="page_title" id="page_title" >
+  			<input type="text"  class="form-control" name="package_name" id="package_name" >
 		</div>
 			<div class="input-group mb-3">
   			<div class="input-group-prepend">
-    			<span class="input-group-text">Content</span>
+    			<span class="input-group-text">Main Price</span>
   			</div>
-  			<textarea  class="form-control ckeditor" name="page_content" id="page_content" ></textarea>
+  			<input  class="form-control" name="main_price" id="main_price" >
 		</div>
-	<!-- 	<div class="input-group mb-3">
-  			<div class="input-group-prepend">
-    			<span class="input-group-text">Author</span>
-  			</div>
-  			<input  class="form-control" name="page_author" id="author"  value="<?php echo ucfirst($titlename); ?>">
-		</div> -->
+
 		<div class="input-group mb-3">
   			<div class="input-group-prepend">
-    			<span class="input-group-text">Image</span>
+    			<span class="input-group-text">Disk Space</span>
   			</div>
-  			<input type="file" class="form-control"  name="userfile" id="userfile" >
+  			<input type="text" class="form-control"  name="disk_space" id="disk_space" >
 		</div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Bandwidth</span>
+        </div>
+        <input type="text" class="form-control"  name="bandwidth" id="bandwidth" >
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Extra Feature</span>
+        </div>
+        <input type="text" class="form-control"  name="extra_feature" id="extra_feature" >
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Renew Price</span>
+        </div>
+        <input type="text" class="form-control"  name="renew_price" id="renew_price" >
+    </div>
 
 
        </div>

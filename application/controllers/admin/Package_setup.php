@@ -18,14 +18,16 @@ public function index(){
 }
 
 public function add(){
-	$this->form_validation->set_rules('map_plugin', 'Map Plugin', 'required');
-	$this->form_validation->set_rules('address', 'Address', 'required');
-	$this->form_validation->set_rules('email', 'Email', 'required');
-	$this->form_validation->set_rules('phone', 'Phone', 'required');
+	$this->form_validation->set_rules('package_name', 'Package Name', 'required');
+	$this->form_validation->set_rules('main_price', 'Main Price', 'required');
+	$this->form_validation->set_rules('disk_space', 'Disk Space', 'required');
+	$this->form_validation->set_rules('bandwidth', 'bandwidth', 'required');
+	$this->form_validation->set_rules('extra_feature', 'Extra Feature', 'required');
+	$this->form_validation->set_rules('renew_price', 'Renew Price', 'required');
 	if($this->form_validation->run()===FALSE){
 		redirect('admin/package_setup');
 	}else{
-		$this->package_setup_model->set_contact();
+		$this->package_setup_model->set_package();
 		redirect('admin/package_setup');
 	}
 

@@ -11,16 +11,18 @@ class Package_setup_model extends CI_Model {
 
     public function set_package(){
     	$data=array(
-    	'map_plugin'=>$this->input->post('map_plugin'),
-    	'address'=>$this->input->post('address'),
-    	'phone'=>$this->input->post('phone'),
-    	'email'=>$this->input->post('email'),		
+    	'package_name'=>$this->input->post('package_name'),
+    	'main_price'=>$this->input->post('main_price'),
+    	'disk_space'=>$this->input->post('disk_space'),
+    	'bandwidth'=>$this->input->post('bandwidth'),
+        'extra_feature'=>$this->input->post('extra_feature'),  
+        'renew_price'=>$this->input->post('renew_price'),    		
 
     	);
 
     
-    		$this->db->where('cont_id',1);
-    		return $this->db->update('package_about',$data);
+    		//$this->db->where('cont_id',1);
+    		return $this->db->insert('package_setup',$data);
     	
 
     }
