@@ -50,6 +50,13 @@ $classvalue=$this->uri->segment(2);
               <p>Create Page</p>
             </a>
           </li>
+
+            <li class="nav-item   <?php if ($classvalue=='package_setup') echo "active" ?>  ">
+            <a class="nav-link" href="<?php echo base_url('admin/package_setup') ?>">
+              <i class="material-icons">file_copy</i>
+              <p>Create Package</p>
+            </a>
+          </li>
         
         <li class="nav-item ">
             <a class="nav-link collapsed" data-toggle="collapse" href="#pagesExamples" aria-expanded="false">

@@ -16,19 +16,17 @@
         						<thead class="text-primary">
         							
                       <tr>
-        								 <th width="10%">Page ID</th><th width="20%">Page Title</th><th width="25%">Content</th><th width="25%">Image</th><th width="20%">Action</th>
+        								 <th>Page Name</th><th>Main Price</th><th>Disk Space</th><th>Bandwidth</th><th>Extra Feature</th><th>Renew Price</th><th width="20%">Action</th>
         							</tr>
         						</thead>
         						<tbody>
-                      <?php foreach($create_page as $key=>$data): ?>
-        					<tr><td><?php echo $data['page_id'] ?></td><td><?php echo $data['page_title'] ?></td><td><?php echo $data['page_content'] ?></td>
-                    <td>
-                      <?php if($data['page_image_name']!='no_image'){ ?>
-                    <img style="width:80px;" src="<?php echo base_url('site_assets/uploads/page/'.$data['page_image_name']) ?>">
-                      <?php }?>
-                    </td>
+                      <?php foreach($package_setup as $key=>$data): ?>
+        					<tr><td><?php echo $data['package_name'] ?></td><td><?php echo $data['main_price'] ?></td><td><?php echo $data['disk_space'] ?></td>
+                    <td><?php echo $data['bandwidth'] ?></td>
+                     <td><?php echo $data['extra_feature'] ?></td>
+                      <td><?php echo $data['renew_price'] ?></td>
                   <td>
-                    <a data-toggle="modal" data-page_id="<?php echo $data['page_id'] ?>" data-page_title="<?php echo $data['page_title'] ?>" data-page_content="<?php echo htmlspecialchars($data['page_content']) ?>" data-target="#editModal" class="btn btn-warning btn-sm editPage">Edit</a>&nbsp;<a onclick="return confirm('Do you really want to delete?')" class="btn btn-danger btn-sm" href="<?php echo base_url('admin/create_page/delete/'.$data['page_id'])?>">Delete</a></td></tr>
+                    <a data-target="#editModal" class="btn btn-warning btn-sm editPage">Edit</a>&nbsp;<a onclick="return confirm('Do you really want to delete?')" class="btn btn-danger btn-sm" href="<?php echo base_url('admin/create_package/delete/'.$data['package_id'])?>">Delete</a></td></tr>
                 <?php endforeach; ?>
                     </tbody>
         					</table>        			
@@ -57,38 +55,38 @@
   			<div class="input-group-prepend">
     			<span class="input-group-text">Package Name</span>
   			</div>
-  			<input type="text"  class="form-control" name="package_name" id="package_name" >
+  			<input type="text"  class="form-control" name="package_name" id="package_name" required="">
 		</div>
 			<div class="input-group mb-3">
   			<div class="input-group-prepend">
     			<span class="input-group-text">Main Price</span>
   			</div>
-  			<input  class="form-control" name="main_price" id="main_price" >
+  			<input  class="form-control" name="main_price" id="main_price" required="">
 		</div>
 
 		<div class="input-group mb-3">
   			<div class="input-group-prepend">
     			<span class="input-group-text">Disk Space</span>
   			</div>
-  			<input type="text" class="form-control"  name="disk_space" id="disk_space" >
+  			<input type="text" class="form-control"  name="disk_space" id="disk_space" required="">
 		</div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text">Bandwidth</span>
         </div>
-        <input type="text" class="form-control"  name="bandwidth" id="bandwidth" >
+        <input type="text" class="form-control"  name="bandwidth" id="bandwidth" required="">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text">Extra Feature</span>
         </div>
-        <input type="text" class="form-control"  name="extra_feature" id="extra_feature" >
+        <input type="text" class="form-control"  name="extra_feature" id="extra_feature" required="">
     </div>
     <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text">Renew Price</span>
         </div>
-        <input type="text" class="form-control"  name="renew_price" id="renew_price" >
+        <input type="text" class="form-control"  name="renew_price" id="renew_price" required="">
     </div>
 
 

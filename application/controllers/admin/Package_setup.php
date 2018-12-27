@@ -12,7 +12,7 @@ class Package_setup extends Admin_controller{
 
 
 public function index(){
-	//$data['contact_about']=$this->package_setup_model->get_contact();
+	$data['package_setup']=$this->package_setup_model->get_package();
 	$data['titlename']=$this->user_model->get_logged_user();
 	$this->display('admin/create_package',$data);
 }

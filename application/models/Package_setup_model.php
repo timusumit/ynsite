@@ -28,8 +28,8 @@ class Package_setup_model extends CI_Model {
     }
 
     public function get_package(){
-        $this->db->limit(1);
-    	$query=$this->db->get_where('package_about');
+       // $this->db->limit(1);
+    	$query=$this->db->get_where('package_setup');
 
     	return $query->result_array();
     }
